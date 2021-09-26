@@ -1,0 +1,125 @@
+ЗАДАНИЕ 1
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main(){
+    setlocale(LC_ALL, "rus");
+    int x1, x2, y1, y2;
+    cout << "Введите целое x1: ";
+    cin >> x1;
+    cout << "Введите целое y1: ";
+    cin >> y1;
+    cout << "Введите целое x2: ";
+    cin >> x2;
+    cout << "Введите целое y2: ";
+    cin >> y2;
+    cout << "Расстояние между точками (x1, y1) и (x2, y2) равно: " << sqrt(pow(x1 - x2, 2) + pow(y1 - y2, 2)) << endl;
+    return 0;
+}
+
+ЗАДАНИЕ 2
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    setlocale(LC_ALL, "rus");
+    int A, B, C;
+    cout << "Введите целое значение A: ";
+    cin >> A;
+    cout << "Введите целое значение B: ";
+    cin >> B;
+    cout << "Введите целое значение C: ";
+    cin >> C;
+    int AC = abs(A) + abs(C);
+    int BC = abs(B) + abs(C);
+    cout << "Расстояние AC равно: " << AC << endl;
+    cout << "Расстояние BC равно: " << BC << endl;
+    cout << "Сумма расстояний AC и BC равна: " << AC + BC << endl;
+    return 0;
+}
+
+ЗАДАНИЕ 3
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    setlocale(LC_ALL, "rus");
+    int A, B, C;
+    cout << "Введите целое значение A: ";
+    cin >> A;
+    cout << "Введите целое значение B: ";
+    cin >> B;
+    cout << "Введите целое значение C: ";
+    cin >> C;
+    int AC = abs(A) + abs(C);
+    int BC = abs(B) + abs(C);
+    cout << "Расстояние AC равно: " << AC << endl;
+    cout << "Расстояние BC равно: " << BC << endl;
+    cout << "Произведение расстояний AC и BC равна: " << AC * BC << endl;
+    return 0;
+}
+
+ЗАДАНИЕ 4
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    setlocale(LC_ALL, "rus");
+    int x1, x2, y1, y2;
+    cout << "Введите целое x1: ";
+    cin >> x1;
+    cout << "Введите целое y1: ";
+    cin >> y1;
+    cout << "Введите целое x2: ";
+    cin >> x2;
+    cout << "Введите целое y2: ";
+    cin >> y2;
+    int a = abs(x2 - x1);
+    int b = abs(y2 - y1);
+    cout << "Первая сторона прямоугольника равна: " << a << endl;
+    cout << "Вторая сторона прямоугольника равна: " << b << endl;
+    cout << "Периметр прямоугольника равен: " << 2 * (a + b) << endl;
+    cout << "Площадь прямоугольника равна: " << a * b << endl;
+    return 0;
+}
+
+ЗАДАНИЕ 5
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main() {
+    setlocale(LC_ALL, "rus");
+    int x1, x2, x3, y1, y2, y3;
+    cout << "Введите целое x1: ";
+    cin >> x1;
+    cout << "Введите целое y1: ";
+    cin >> y1;
+    cout << "Введите целое x2: ";
+    cin >> x2;
+    cout << "Введите целое y2: ";
+    cin >> y2;
+    cout << "Введите целое x3: ";
+    cin >> x3;
+    cout << "Введите целое y3: ";
+    cin >> y3;
+    cout << "a, b, c - стороны треугольника" << endl;
+    double a = sqrt(pow(x1 - x2, 2) + pow(y1 - y2, 2));
+    double b = sqrt(pow(x2 - x3, 2) + pow(y2 - y3, 2));
+    double c = sqrt(pow(x3 - x1, 2) + pow(y3 - y1, 2));
+    cout << "Сторона a равна: " << a << endl;
+    cout << "Сторона b равна: " << b << endl;
+    cout << "Сторона c равна: " << c << endl;
+    double P = a + b + c;
+    cout << "Периметр треугольника равен: " << P << endl;
+    double p = (double)P / 2;
+    double S = sqrt(p * (p - a) * (p - b) * (p - c));
+    cout << "Площадь треугольника равна: " << S << endl;
+    return 0;
+}
