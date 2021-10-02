@@ -56,8 +56,8 @@ int main(){
     cout << "Введите целое значение C: ";
     cin >> C;
     if (C > A && C < B){
-    int AC = abs(A) + abs(C);
-    int BC = abs(B) + abs(C);
+    int AC = abs(C - A);
+    int BC = abs(C - B);
     cout << "Расстояние AC равно: " << AC << endl;
     cout << "Расстояние BC равно: " << BC << endl;
     cout << "Произведение расстояний AC и BC равна: " << AC * BC << endl;
