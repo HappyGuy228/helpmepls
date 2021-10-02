@@ -1,0 +1,46 @@
+ЗАДАНИЕ 1
+
+print("Введите a: ", end = "")
+a = int(input())
+print("Введите b: ", end = "")
+b = int(input())
+a, b = b, a
+print(a, b)
+
+ЗАДАНИЕ 2
+
+print("Введите a: ", end = "")
+a = int(input())
+print("Введите b: ", end = "")
+b = int(input())
+print("Введите с: ", end = "")
+c = int(input())
+a, b, c = b, c, a
+print(a, b, c)
+
+ЗАДАНИЕ 3
+
+print("Введите a: ", end = "")
+a = int(input())
+print("Введите b: ", end = "")
+b = int(input())
+print("Введите с: ", end = "")
+c = int(input())
+a, b, c = c, a, b
+print(a, b, c)
+
+ЗАДАНИЕ 4
+
+print("Введите x: ", end = "")
+x = int(input())
+y = 3 * x ** 6 - 6 * x ** 2 - 7
+print("Значение функции равно: ", y)
+
+ЗАДАНИЕ 5
+print("Введите x: ", end = "")
+x = int(input())
+y = 4 * (x - 3) ** 6 - 7 * (x - 3) ** 3 + 2
+print("Значение функции равно: ", y)
+
+ЗАДАНИЕ 6
+
