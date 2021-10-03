@@ -44,3 +44,20 @@ print("Значение функции равно: ", y)
 
 ЗАДАНИЕ 6
 
+print("Введите число A: ", end = "")
+A = int(input())
+k = A * A
+k = k * k
+k = k * k
+print("A в 8 степени равно: ", k)
+
+ЗАДАНИЕ 7
+
+print("Введите число A: ", end = "")
+A = int(input())
+B = A * A 
+C = B * A 
+B = C * C 
+C = B * C 
+B = C * B 
+print("A в 15 степени: ", B)
