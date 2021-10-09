@@ -5,7 +5,7 @@ a = int(input())
 print("Введите b: ", end = "")
 b = int(input())
 a, b = b, a
-print(a, b)
+print("Теперь число a равно:", a, ", а число b:", b)
 
 ЗАДАНИЕ 2
 
@@ -16,7 +16,7 @@ b = int(input())
 print("Введите с: ", end = "")
 c = int(input())
 a, b, c = b, c, a
-print(a, b, c)
+print("Теперь число a равно:", a, ", число b равно:", b, ", а число с равно:", c)
 
 ЗАДАНИЕ 3
 
@@ -27,7 +27,7 @@ b = int(input())
 print("Введите с: ", end = "")
 c = int(input())
 a, b, c = c, a, b
-print(a, b, c)
+print("Теперь число a равно:", a, ", число b равно:", b, ", а число с равно:", c)
 
 ЗАДАНИЕ 4
 
