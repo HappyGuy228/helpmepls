@@ -32,3 +32,70 @@ int main(){
     cout << "Значение угла в градусах:" << (double)(alpha * pi)/180 << endl;
     return 0;
 }
+
+ЗАДАНИЕ 3
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    setlocale(LC_ALL, "rus");
+    int X, A, Y;
+    cout << "Введите X: ";
+    cin >> X;
+    cout << "Введите A: ";
+    cin >> A;
+    cout << "Введите Y: ";
+    cin >> Y;
+    cout << "Пусть " << X << " кг конфет стоят " << A << " рублей" << endl;
+    cout << "Тогда 1 кг конфет стоит " << double(A/X) << " рублей" << endl;
+    cout << "А " << Y << " кг конфет стоят " << double(A/X) * Y << " рублей";
+    return 0;
+}
+
+ЗАДАНИЕ 4
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    setlocale(LC_ALL, "rus");
+    int V1, V2, T;
+    float S;
+    cout << "Скорость первого автомобиля равна: ";
+    cin >> V1;
+    cout << "Скорость второго автомобиля равна: ";
+    cin >> V2;
+    cout << "Расстояние между ними равно: ";
+    cin >> S;
+    cout << "Введите T: ";
+    cin >> T;
+    cout << "Тогда через " << T << " часов расстояние между ними будет равно: " << S + (V1 + V2) * T;
+    return 0;
+}
+
+ЗАДАНИЕ 5
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    setlocale(LC_ALL, "rus");
+    int A, B;
+    cout << "Пусть задано уравнение вида A * x + B = 0" << endl;
+    cout << "Введите коэффициент A: ";
+    cin >> A;
+    cout << "Введите коэффициент B: ";
+    cin >> B;
+    if (A == 0){
+        cout << "Невозможно, спасите";
+    }
+    else{
+        cout << "Тогда x равен " << double(-B/A);
+    }
+    return 0;
+}
+
+ЗАДАНИЕ 6
+
+#
