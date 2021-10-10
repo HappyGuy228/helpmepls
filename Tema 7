@@ -60,8 +60,7 @@ using namespace std;
 
 int main(){
     setlocale(LC_ALL, "rus");
-    int V1, V2, T;
-    float S;
+    int V1, V2, T, S;
     cout << "Скорость первого автомобиля равна: ";
     cin >> V1;
     cout << "Скорость второго автомобиля равна: ";
