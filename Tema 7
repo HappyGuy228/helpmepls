@@ -91,7 +91,7 @@ int main(){
         cout << "Невозможно, спасите";
     }
     else{
-        cout << "Тогда x равен " << double(-B/A);
+        cout << "Тогда x равен " << (double)-B/A << endl;
     }
     return 0;
 }
@@ -133,7 +133,7 @@ int main(){
     cout << "Найдем второй определитель (для y)" << endl;
     delta2 = (A1 * C2) - (A2 * C1);
     cout << "Он равен " << delta2 << endl;
-    cout << "Тогда x равен " << double(delta1/delta) << ", а y равен " << double(delta2/delta);
+    cout << "Тогда x равен " << (double)delta1/delta << ", а y равен " << (double)delta2/delta;
     }
     return 0; 
 }
