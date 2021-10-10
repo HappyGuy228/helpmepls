@@ -1,0 +1,91 @@
+ЗАДАНИЕ 1
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main(){
+    setlocale(LC_ALL, "rus");
+    int A, B;
+    cout << "Введите размер файла в байтах: ";
+    cin >> A;
+    B = trunc(A/pow(2,10));
+    cout << "Тогда полных килобайт он будет весит " << B << endl;
+    return 0;
+}
+
+ЗАДАНИЕ 2
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    setlocale(LC_ALL, "rus");
+    int A, B;
+    cout << "Длина отрезка A: ";
+    cin >> A;
+    cout << "Длина отрезка B: ";
+    cin >> B;
+    if (A > B){
+        cout << "Количество отрезков B, размещенных на A, равно: " << A / B << endl;
+    }
+    else{
+        cout << "Не удовлетворяет условиям задачи" << endl;
+    return 0;
+}
+
+ЗАДАНИЕ 3
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    setlocale(LC_ALL, "rus");
+    int A, B;
+    cout << "Длина отрезка A: ";
+    cin >> A;
+    cout << "Длина отрезка B: ";
+    cin >> B;
+    if (A > B){
+        cout << "Длина незанятой части отрезка A равна: " << A - A / B * B << endl;
+    }
+    else{
+        cout << "Не удовлетворяет условиям задачи" << endl;
+    }
+    return 0;
+}
+
+ ЗАДАНИЕ 4
+ 
+ #include <iostream>
+using namespace std;
+
+int main(){
+    setlocale(LC_ALL, "rus");
+    int A, B, x, y;
+    cout << "Введите двухзначное число A: ";
+    cin >> A;
+    x = A % 10;
+    y = (A / 10) % 10;
+    B = 10 * x + y;
+    cout << "Число при перестановке цифр: " << B << endl;
+    return 0;
+}
+
+ЗАДАНИЕ 5
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    setlocale(LC_ALL, "rus");
+    int A, B, x, y, z;
+    cout << "Введите трехзначное число: ";
+    cin >> A;
+    x = A % 10;
+    y = A / 100;
+    z = (A / 10) % 10;
+    B = 100 * z + 10 * x + y; 
+    cout << "Полученное число равно: " << B << endl;
+    return 0;
+}
