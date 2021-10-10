@@ -49,7 +49,7 @@ int main(){
     cin >> Y;
     cout << "Пусть " << X << " кг конфет стоят " << A << " рублей" << endl;
     cout << "Тогда 1 кг конфет стоит " << (double)A / X << " рублей" << endl;
-    cout << "А " << Y << " кг конфет стоят " << (double)A / X * Y << " рублей";
+    cout << "А " << Y << " кг конфет стоят " << (double)A / X * Y << " рублей" << endl;
     return 0;
 }
 
@@ -132,7 +132,7 @@ int main(){
     cout << "Найдем второй определитель (для y)" << endl;
     delta2 = (A1 * C2) - (A2 * C1);
     cout << "Он равен " << delta2 << endl;
-    cout << "Тогда x равен " << (double)delta1/delta << ", а y равен " << (double)delta2/delta;
+    cout << "Тогда x равен " << (double)delta1/delta << ", а y равен " << (double)delta2/delta << endl;
     }
     return 0; 
 }
