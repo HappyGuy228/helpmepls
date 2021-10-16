@@ -1,0 +1,89 @@
+ЗАДАНИЕ 1
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    setlocale(LC_ALL, "rus");
+    int N, A;
+    cout << "С начала суток прошло секунд: ";
+    cin >> N;
+    cout << "Столько секунд прошло с начала последней минуты: " << N % 60 << endl;
+    return 0; 
+}
+
+ЗАДАНИЕ 2
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    setlocale(LC_ALL, "rus");
+    int K, A;
+    cout << "Введите номер дня года: ";
+    cin >> K;
+    if (K >= 1 && K <= 365){
+        A = K % 7;
+        cout << "Номер дня недели: " << A << endl;
+    }
+    else{
+        cout << "Не удовлетворяет условию задачи" << endl;
+    }
+    return 0;
+}
+
+ЗАДАНИЕ 3
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    setlocale(LC_ALL, "rus");
+    int K, N, A;
+    cout << "Введите номер дня года: ";
+    cin >> K;
+    cout << "Введите день недели 1 января: ";
+    cin >> N;
+    A = (K + N - 1) % 7;
+    if (K >= 1 && K <= 365 && N >= 1 && N <= 7){
+        cout << "Номер дня недели при заданном дне недели 1 января: " << A << endl;
+    }
+    else{
+        cout << "Не удовлетворяет условиям задачи" << endl;
+    }
+    return 0;
+}
+
+ЗАДАНИЕ 4
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    setlocale(LC_ALL, "rus");
+    int A, B, C, Q;
+    cout << "Введите целое положительное A: ";
+    cin >> A;
+    cout << "Введите целое положительное B: ";
+    cin >> B;
+    cout << "Введите целое положительное C: ";
+    cin >> C;
+    Q = (A / C) * (B / C);
+    cout << "Количество квадратов, размещенных на прямоугольнике: " << Q << endl;
+    cout << "Площадь незатяной части прямоугольника: " << (A * B) - Q * (C * C) << endl;
+    return 0;
+}
+
+ЗАДАНИЕ 5
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    setlocale(LC_ALL, "rus");
+    int N;
+    cout << "Введите номер некоторого года N: ";
+    cin >> N;
+    cout << "Тогда номер соответствующего столетия: " << (N - 1) / 100 + 1 << endl;
+    return 0;
+}
