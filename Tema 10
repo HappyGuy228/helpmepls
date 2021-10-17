@@ -1,0 +1,159 @@
+ЗАДАНИЕ 1
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    setlocale(LC_ALL, "rus");
+    int A, B;
+    cout << "Введите A: ";
+    cin >> A;
+    cout << "Введите B: ";
+    cin >> B;
+    if (A > 2 && B <= 3){
+        cout << "True" << endl;
+    }
+    else{
+        cout << "False" << endl;
+    }
+    return 0;
+} 
+
+ЗАДАНИЕ 2
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    setlocale(LC_ALL, "rus");
+    int A, B, C;
+    cout << "Введите A: ";
+    cin >> A;
+    cout << "Введите B: ";
+    cin >> B;
+    cout << "Введите C: ";
+    cin >> C;
+    if (B > A && B < C){
+        cout << "True" << endl;
+    }
+    else{
+        cout << "False" << endl;
+    }
+    return 0;
+}
+
+ЗАДАНИЕ 3
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    setlocale(LC_ALL, "rus");
+    int A;
+    cout << "Введите A: ";
+    cin >> A;
+    if (A % 2 == 0 && A / 10 != 0 && A / 100 == 0){
+        cout << "True" << endl;
+    }
+    else{
+        cout << "False" << endl;
+    }
+    return 0;
+}
+ 
+ЗАДАНИЕ 4
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    setlocale(LC_ALL, "rus");
+    int A, x, y, z;
+    cout << "Введите трехзначное число A: ";
+    cin >> A;
+    x = A % 10;
+    y = (A / 10) % 10;
+    z = A / 100;
+    if (y > x && y < z || y < x && y > z){
+        cout << "True" << endl;
+    }
+    else{
+        cout << "False" << endl;
+    }
+    return 0;
+}
+
+ЗАДАНИЕ 5
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    setlocale(LC_ALL, "rus");
+    int A, x, y, z, w;
+    cout << "Введите четырехзначное число A: ";
+    cin >> A;
+    x = A / 1000;
+    y = (A / 100) % 10;
+    z = (A / 10) % 10;
+    w = A % 10;
+    if (x == w && y == z){
+        cout << "True" << endl;
+    }
+    else{
+        cout << "False" << endl;
+    }
+    return 0;
+}
+
+ЗАДАНИЕ 6
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main(){
+    setlocale(LC_ALL, "rus");
+    int a, b, c;
+    cout << "Введите длину стороны a: ";
+    cin >> a;
+    cout << "Введите длину стороны b: ";
+    cin >> b;
+    cout << "Введите длину стороны c: ";
+    cin >> c;
+    if (a <= b + c && b <= a + c && c <= a + b){
+        if (pow(a, 2) == pow(b, 2) + pow(c, 2) || pow(c, 2) == pow(a, 2) + pow(b, 2) || pow(b, 2) == pow(a, 2) + pow(c, 2)){
+            cout << "True" << endl;
+        }
+        else{
+            cout << "False" << endl;
+        }
+    }
+    else{
+        cout << "Треугольника не существует" << endl;
+    }
+    return 0;
+}
+
+ЗАДАНИЕ 7
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    setlocale(LC_ALL, "rus");
+    int a, b, c;
+    cout << "Введите длину стороны a: ";
+    cin >> a;
+    cout << "Введите длину стороны b: ";
+    cin >> b;
+    cout << "Введите длину стороны c: ";
+    cin >> c;
+    if (a <= b + c && b <= a + c && c <= a + b){
+        cout << "True" << endl;
+    }
+    else{
+        cout << "False" << endl;
+    }
+    return 0;
+}
