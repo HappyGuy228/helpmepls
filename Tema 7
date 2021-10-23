@@ -10,7 +10,7 @@ int main(){
     cout << "Значение угла в градусах: ";
     cin >> alpha;
     if (alpha > 0 && alpha <= 360){
-        cout << "Значение угла в радианах:" << (double)(alpha * pi)/180 << endl;
+        cout << "Значение угла в радианах: " << (double)(alpha * pi)/180 << endl;
     }
     else{
         cout << "Не удовлетворяет условиям задачи";
