@@ -9,7 +9,7 @@ int main(){
     int A, B;
     cout << "Введите размер файла в байтах: ";
     cin >> A;
-    B = trunc(A/pow(2,10));
+    B = ceil(A/pow(2,10));
     cout << "Тогда полных килобайт он будет весит " << B << endl;
     return 0;
 }
