@@ -1,179 +1,145 @@
-ЗАДАНИЕ 1
-
-#include <iostream>
-using namespace std;
-
-int main(){
-    setlocale(LC_ALL, "rus");
-    int A, B;
-    cout << "Введите целое значение A: ";
-    cin >> A;
-    cout << "Введите целое значение B: ";
-    cin >> B;
-    if (A != B){
-        if (A > B){
-            B = A;
-        }
-        else{
-            A = B;
-        }
-    }
-    else{
-        A = B = 0;
-    }
-    cout << "A равна " << A << endl;
-    cout << "B равна " << B << endl;
-    return 0;
-}
-
-ЗАДАНИЕ 2
-
-#include <iostream>
-using namespace std;
-
-int main(){
-    setlocale(LC_ALL, "rus");
-    int A, B, C;
-    cout << "Введите значение A: ";
-    cin >> A;
-    cout << "Введите значение B: ";
-    cin >> B;
-    cout << "Введите значение C: ";
-    cin >> C;
-    if (A < C && A < B){
-        cout << "Тогда сумма двух наибольших равна " << B + C << endl;
-    }
-    else if (B < A && B < C){
-        cout << "Тогда сумма двух наибольших равна " << A + C << endl;
-    }
-    else if (C < A && C < B){
-        cout << "Тогда сумма двух наибольших равна " << A + B << endl;
-    }
-    return 0;
-}
-
-ЗАДАНИЕ 3
-
 #include <iostream>
 #include <math.h>
 using namespace std;
 
 int main(){
     setlocale(LC_ALL, "rus");
-    int x1, y1, x2, y2, x3, y3;
-    float AB, AC;
-    cout << "x1 для точки A: ";
-    cin >> x1;
-    cout << "y1 для точки A: ";
-    cin >> y1;
-    cout << "x2 для точки B: ";
-    cin >> x2;
-    cout << "y2 для точки B: ";
-    cin >> y2;
-    cout << "x3 для точки C: ";
-    cin >> x3;
-    cout << "y3 для точки C: ";
-    cin >> y3;
-    AB = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
-    AC = sqrt(pow(x3 - x1, 2) + pow(y3 - y1, 2));
-    if (AC > AB){
-        cout << "Точка B ближе к точке A, а расстояние между ними равно " << AB << endl;
-    }
-    else{
-        cout << "Точка C ближе к точке A, а расстояние между ними равно " << AC << endl;
-    }
-    return 0;
-}
-
-ЗАДАНИЕ 4
-
-#include <iostream>
-using namespace std;
-
-int main(){
-    setlocale(LC_ALL, "rus");
-    int x1, y1;
-    cout << "x1 для точки: ";
-    cin >> x1;
-    cout << "y1 для точки: ";
-    cin >> y1;
-    if (x1 != 0 && y1 != 0){
-        if (x1 > 0 && y1 > 0){
-            cout << "Точка находится в первой четверти" << endl;
+    int zad;
+    while (true){
+        cout << "Введите номер задания (1-6): ";
+        cin >> zad;
+        if (zad == 1){
+            int A, B;
+            cout << "Введите целое значение A: ";
+            cin >> A;
+            cout << "Введите целое значение B: ";
+            cin >> B;
+            if (A != B){
+                if (A > B){
+                    B = A;
+                }
+                else{
+                    A = B;
+                }
+            }
+            else{
+                A = B = 0;
+            }
+            cout << "A равна " << A << endl;
+            cout << "B равна " << B << endl;
         }
-        else if (x1 < 0 && y1 > 0){
-            cout << "Точка находится во второй четверти" << endl;
+        if (zad == 2){
+            int A, B, C;
+            cout << "Введите значение A: ";
+            cin >> A;
+            cout << "Введите значение B: ";
+            cin >> B;
+            cout << "Введите значение C: ";
+            cin >> C;
+            if (A < C && A < B){
+                cout << "Тогда сумма двух наибольших равна " << B + C << endl;
+            }
+            else if (B < A && B < C){
+                cout << "Тогда сумма двух наибольших равна " << A + C << endl;
+            }
+            else if (C < A && C < B){
+                cout << "Тогда сумма двух наибольших равна " << A + B << endl;
+            }
         }
-        else if (x1 < 0 && y1 < 0){
-            cout << "Точка находится в третьей четверти" << endl;
-        }
-        else{
-            cout << "Точка находится в четвертой четверти" << endl; 
-        }
-    }
-    else{
-        cout << "Точка находится на одной из осей" << endl;
-    }
-    return 0;
-}
+        if (zad == 3){
+            int x1, y1, x2, y2, x3, y3;
+            float AB, AC;
+            cout << "x1 для точки A: ";
+            cin >> x1;
+            cout << "y1 для точки A: ";
+            cin >> y1;
+            cout << "x2 для точки B: ";
+            cin >> x2;
+            cout << "y2 для точки B: ";
+            cin >> y2;
+            cout << "x3 для точки C: ";
+            cin >> x3;
+            cout << "y3 для точки C: ";
+            cin >> y3;
+            AB = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+            AC = sqrt(pow(x3 - x1, 2) + pow(y3 - y1, 2));
+            if (AC > AB){
+                cout << "Точка B ближе к точке A, а расстояние между ними равно " << AB << endl;
+            }
+            else{
+                cout << "Точка C ближе к точке A, а расстояние между ними равно " << AC << endl;
 
-ЗАДАНИЕ 5
-
-#include <iostream>
-using namespace std;
-
-int main(){
-    setlocale(LC_ALL, "rus");
-    int A;
-    cout << "Введите целое число A: ";
-    cin >> A;
-    if (A == 0){
-        cout << "Нулевое число" << endl;
-    }
-    else{
-        if (A > 0 && A % 2 == 0){
-            cout << "Положительное четное число" << endl;
         }
-        else if (A < 0 && A % 2 == 0){
-            cout << "Отрицательное четное число" << endl;
+        if (zad == 4){
+            int x1, y1;
+            cout << "x1 для точки: ";
+            cin >> x1;
+            cout << "y1 для точки: ";
+            cin >> y1;
+            if (x1 != 0 && y1 != 0){
+                if (x1 > 0 && y1 > 0){
+                    cout << "Точка находится в первой четверти" << endl;
+                }
+                else if (x1 < 0 && y1 > 0){
+                    cout << "Точка находится во второй четверти" << endl;
+                }
+                else if (x1 < 0 && y1 < 0){
+                    cout << "Точка находится в третьей четверти" << endl;
+                }
+                else{
+                    cout << "Точка находится в четвертой четверти" << endl; 
+                }
+            }
+            else{
+                cout << "Точка находится на одной из осей" << endl;
+            }
         }
-        else if (A > 0 && A % 2 != 0){
-            cout << "Положительное нечетное число" << endl;
+        if (zad == 5){
+            int A;
+            cout << "Введите целое число A: ";
+            cin >> A;
+            if (A == 0){
+                cout << "Нулевое число" << endl;
+            }
+            else{
+                if (A > 0 && A % 2 == 0){
+                    cout << "Положительное четное число" << endl;
+                }
+                else if (A < 0 && A % 2 == 0){
+                    cout << "Отрицательное четное число" << endl;
+                }
+                else if (A > 0 && A % 2 != 0){
+                    cout << "Положительное нечетное число" << endl;
+                }
+                else{
+                    cout << "Отрицательное нечетное число" << endl;
+                }
+            }
         }
-        else{
-            cout << "Отрицательное нечетное число" << endl;
+        if (zad == 6){
+            int A;
+            cout << "Введите число A в диапазоне 1-999: ";
+            cin >> A;
+            if (A % 2 == 0 && A / 100 == 0 && A / 10 != 0){
+                cout << "Четное двухзначное число" << endl;
+            }
+            else if (A % 2 == 0 && A / 10 == 0){
+                cout << "Четное однозначное число" << endl;
+            }
+            else if (A % 2 == 0 && A / 100 != 0){
+                cout << "Четное трехзначное число" << endl;
+            }
+            else if (A % 2 != 0 && A / 100 == 0 && A / 10 != 0){
+                cout << "Нечетное двухзначное число" << endl;
+            }
+            else if (A % 2 != 0 && A / 10 == 0){
+                cout << "Нечетное однозначное число" << endl;
+            }
+            else if (A % 2 != 0 && A / 100 != 0){
+                cout << "Нечетное трехзначное число" << endl;
+            break;
+            }
         }
-    }
-    return 0;
-}
-
-ЗАДАНИЕ 6
-
-#include <iostream>
-using namespace std;
-
-int main(){
-    setlocale(LC_ALL, "rus");
-    int A;
-    cout << "Введите число A в диапазоне 1-999: ";
-    cin >> A;
-    if (A % 2 == 0 && A / 100 == 0 && A / 10 != 0){
-        cout << "Четное двухзначное число" << endl;
-    }
-    else if (A % 2 == 0 && A / 10 == 0){
-        cout << "Четное однозначное число" << endl;
-    }
-    else if (A % 2 == 0 && A / 100 != 0){
-        cout << "Четное трехзначное число" << endl;
-    }
-    else if (A % 2 != 0 && A / 100 == 0 && A / 10 != 0){
-        cout << "Нечетное двухзначное число" << endl;
-    }
-    else if (A % 2 != 0 && A / 10 == 0){
-        cout << "Нечетное однозначное число" << endl;
-    }
-    else if (A % 2 != 0 && A / 100 != 0){
-        cout << "Нечетное трехзначное число" << endl;
     }
     return 0;
 }
