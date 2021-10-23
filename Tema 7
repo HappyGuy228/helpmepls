@@ -29,7 +29,7 @@ int main(){
     float pi = 3.14;
     cout << "Значение угла в радианах: ";
     cin >> rad;
-    cout << "Значение угла в градусах:" << (double)(alpha * pi)/180 << endl;
+    cout << "Значение угла в градусах:" << (double)(alpha * 180)/pi << endl;
     return 0;
 }
 
