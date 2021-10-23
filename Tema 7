@@ -103,7 +103,7 @@ using namespace std;
 int main(){
     setlocale(LC_ALL, "rus");
     int A1, A2, B1, B2, C1, C2;
-    double delta, delta1, delta2;
+    double delta, delta1, delta2, x, y;
     cout << "Пусть дана система линейных уравений вида: " << endl;
     cout << "A1 * x + B1 * y = C1" << endl;
     cout << "A2 * x + B2 * y = C2" << endl;
@@ -132,7 +132,15 @@ int main(){
     cout << "Найдем второй определитель (для y)" << endl;
     delta2 = (A1 * C2) - (A2 * C1);
     cout << "Он равен " << delta2 << endl;
-    cout << "Тогда x равен " << (double)delta1/delta << ", а y равен " << (double)delta2/delta << endl;
+    x = (double)delta1/delta;
+    y = (double)delta2/delta;
+    if (x == -0){
+        x = 0;
+    }
+    if (y == -0){
+        y = 0;
+    }
+    cout << "Тогда x равен " << x << ", а y равен " << y << endl;
     }
     return 0; 
 }
