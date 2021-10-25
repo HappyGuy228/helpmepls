@@ -1,0 +1,99 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main(){
+    setlocale(LC_ALL, "rus");
+    int zad;
+    while (true){
+        cout << "Введите номер задания (1-5): ";
+        cin >> zad;
+        if (zad == 1){
+            double A;
+            cout << "Введите цену одного килограмма конфет (в р.): ";
+            cin >> A;
+            for(double m = 0.1; m < 1.1; ++m){
+                if (m = 0.1){
+                    cout << "0.1 кг конфет стоит " << A * m << " р." << endl;
+                }
+                if (m = 0.2){
+                    cout << "0.2 кг конфет стоит " << A * m << " р." << endl;
+                }
+                if (m = 0.3){
+                    cout << "0.3 кг конфет стоит " << A * m << " р." << endl;
+                }
+                if (m = 0.4){
+                    cout << "0.4 кг конфет стоит " << A * m << " р." << endl;
+                }
+                if (m = 0.5){
+                    cout << "0.5 кг конфет стоит " << A * m << " р." << endl;
+                }
+                if (m = 0.6){
+                    cout << "0.6 кг конфет стоит " << A * m << " р." << endl;
+                }
+                if (m = 0.7){
+                    cout << "0.7 кг конфет стоит " << A * m << " р." << endl;
+                }
+                if (m = 0.8){
+                    cout << "0.8 кг конфет стоит " << A * m << " р." << endl;
+                }
+                if (m = 0.9){
+                    cout << "0.9 кг конфет стоит " << A * m << " р." << endl;
+                }
+                if (m = 1){
+                    cout << "1 кг конфет стоит " << A * m << " р." << endl;
+                }
+            }
+        }
+        if (zad == 2){
+            int N;
+            double a = 1.1;
+            double p = 1; 
+            cout << "Введите число сомножителей: ";
+            cin >> N;
+            for(int i = 1; i <= N; ++i){
+                p *= a;
+                a += 0.1;
+            }
+            cout << "Тогда произведение " << N << " сомножителей равно: " << p << endl;
+        }
+        if (zad == 3){
+            int N, kvN;
+            kvN = 0;
+            cout << "Введите целое число: ";
+            cin >> N;
+            for(int i = 1; i <= (2 * N - 1); i += 2){
+                kvN += i;
+                cout << kvN << " ";
+            }
+            cout << endl;
+        }
+        if (zad == 4){
+            double A;
+            double sum = 1;
+            int N;
+            cout << "Введите A: ";
+            cin >> A;
+            cout << "Введите N: ";
+            cin >> N;
+            for(int i = 1; i <= N; i++){
+                sum += pow(A, i);
+            }
+            cout << "Тогда эта сумма равна: " << sum << endl;
+        }
+        if (zad == 5){
+            double A;
+            double sum = 1;
+            int N;
+            cout << "Введите A: ";
+            cin >> A;
+            cout << "Введите N: ";
+            cin >> N;
+            for(int i = 1; i <= N; i++){
+                sum += pow(-A, i);
+            }
+            cout << "Тогда эта сумма равна: " << sum << endl;
+        }
+    }    
+    return 0;
+}
