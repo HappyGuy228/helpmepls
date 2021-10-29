@@ -2,6 +2,8 @@
 #include <math.h>
 using namespace std;
 
+// НАЧАЛО ОБЪЯВЛЕНИЯ ФУНКЦИЙ
+
 void PowerA3(float A, float *B){
     *B = pow(A, 3);
 }
@@ -59,6 +61,8 @@ float Fact2(float N){
     }
     return help;
 }
+
+// КОНЕЦ ОБЪЯВЛЕНИЯ ФУНКЦИЙ
 
 int main(){
     setlocale(LC_ALL, "rus");
