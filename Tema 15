@@ -1,1 +1,113 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
 
+void PowerA3(float A, float *B){
+    *B = pow(A, 3);
+}
+
+int sign(float X){
+    if (X < 0){
+        X = -1;
+    }
+    if (X == 0){
+        X = 0;
+    }
+    if (X > 0){
+        X = 1;
+    }
+    return X;
+}
+
+float RingS(float R1, float R2){
+    float S;
+    S = 3.14 * (pow(R1, 2) - pow(R2, 2));
+    if (R1 > R2){
+        return S;
+    }
+    else{
+        return 0;
+    }
+}
+
+int Quarter(float x, float y){
+    int Chetvert;
+    if (x != 0 && y != 0){
+        if (x > 0 && y > 0){
+            Chetvert = 1;
+        }
+        if (x < 0 && y > 0){
+            Chetvert = 2;
+        }
+        if (x < 0 && y < 0){
+            Chetvert = 3;
+        }
+        if (x > 0 && y < 0){
+            Chetvert = 4;
+        }
+    }
+    else{
+        return 0;
+    }
+    return Chetvert;
+}
+
+float Fact2(float N){
+    float help = 1;
+    for(N; N > 0; N -= 2){
+        help *= N;
+    }
+    return help;
+}
+
+int main(){
+    setlocale(LC_ALL, "rus");
+    int zad;
+    while (true){
+        cout << "Введите номер задания (1-5): ";
+        cin >> zad;
+        if (zad == 1){
+            for(int i = 1; i <= 5; i++){
+                float A, B;
+                cout << "Введите A: ";
+                cin >> A;
+                PowerA3(A, &B);
+                cout << "Тогда B равна: " << B << endl;
+            }
+        }
+        if (zad == 2){
+            float A, B;
+            cout << "Введите A: ";
+            cin >> A;
+            cout << "Введите B: ";
+            cin >> B;
+            cout << "Тогда sign(A) + sign(B) равно: "<< sign(A) + sign(B) << endl;
+        }
+        if (zad == 3){
+            for(int i = 1; i <= 3; i++){
+                float R1, R2, S;
+                cout << "Введите R1: ";
+                cin >> R1;
+                cout << "Введите R2 < R1: ";
+                cin >> R2;
+                cout << "Тогда площадь кольца, заключенного между окружностями радиусов R1 и R2 (R1 > R2), равна " << RingS(R1, R2) << endl;
+            }
+        }
+        if (zad == 4){
+            float x, y;
+            cout << "Введите координату x: ";
+            cin >> x;
+            cout << "Введите координату y: ";
+            cin >> y;
+            cout << "Точка находится в " << Quarter(x, y) << " четверти" << endl;
+        }
+        if (zad == 5){
+            float N;
+            cout << "Введите N: ";
+            cin >> N;
+            cout << "Тогда двойной факториал этого числа равен: " << Fact2(N) << endl;
+            break;
+        }
+    }
+    return 0;
+}
