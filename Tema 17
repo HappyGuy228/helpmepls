@@ -1,0 +1,141 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main(){
+    setlocale(LC_ALL, "rus");
+    int zad;
+    while (true){
+        cout << "Введите номер задания (1-5): ";
+        cin >> zad;
+        if (zad == 1){
+            int n, k, l, s;
+            cout << "Введите размер массива n: ";
+            cin >> n;
+            int mass[]{ n };
+            for(int i = 0; i < n; i++){
+                cout << i + 1 << "-ый элемент: ";
+                cin >> mass[i];
+                }
+            cout << "Исходный массив: ";
+            for(int i = 0; i < n; i++){
+                cout << mass[i] << " ";
+            }
+            cout << endl;
+            cout << "Введите k: ";
+            cin >> k;
+            cout << "Введите l > k: ";
+            cin >> l;
+
+            s = 0;
+            for(int i = k; i < l + 1; i++){
+                s += mass[i - 1];
+            }
+            cout << "Тогда среднее арифметическое элементов от k до l включительно равно: " << (double)s/(l - k + 1) << endl;
+        }
+        if (zad == 2){
+            int n, d;
+            cout << "Введите размер массива n: ";
+            cin >> n;
+            int mass[]{ n };
+            for(int i = 0; i < n; i++){
+                cout << i + 1 << "-ый элемент: ";
+                cin >> mass[i];
+                }
+            cout << "Исходный массив: ";
+            for(int i = 0; i < n; i++){
+                cout << mass[i] << " ";
+            }
+            cout << endl;
+            
+            for(int i = 1; i < n - 1; i++){
+                if (mass[i] - mass[i - 1] == mass[i + 1] - mass[i]){
+                    d = mass[i] - mass[i - 1];
+                }
+                else{
+                    d = 0;
+                    break;
+                }
+            }
+            if (d != 0){
+                cout << "Это арифметическая прогрессия, разность равна: " << d;
+            }
+            else{
+                cout << "Не арифметическая прогрессия, поэтому выводим 0";
+            }
+            cout << endl;
+        }
+        if (zad == 3){
+            int n, min;
+            cout << "Введите размер массива n: ";
+            cin >> n;
+            int a[]{ n };
+            for(int i = 0; i < n; i++){
+                cout << i + 1 << "-ый элемент: ";
+                cin >> a[i];
+                }
+            cout << "Исходный массив: ";
+            for(int i = 0; i < n; i++){
+                cout << a[i] << " ";
+            }
+            cout << endl;
+            min = a[1];
+            for(int i = 1; i < n; i += 2){
+                if (a[i] < min)
+                    min = a[i];
+            }
+            cout << "Минимальный равен: " << min << endl;
+        }
+        if (zad == 4){
+            int n, maxim;
+            cout << "Введите размер массива n: ";
+            cin >> n;
+            int a[]{ n };
+            for(int i = 0; i < n; i++){
+                cout << i + 1 << "-ый элемент: ";
+                cin >> a[i];
+                }
+            cout << "Исходный массив: ";
+            for(int i = 0; i < n; i++){
+                cout << a[i] << " ";
+            }
+            cout << endl;
+            
+            maxim = 0;
+            for(int i = 1; i < n - 1; i++){
+                if (a[i] > a[i + 1] && a[i] > a[i - 1])
+                    maxim = i;
+            }
+            cout << "Номер последнего локального максимума равен: " << maxim << endl;
+        }
+        if (zad == 5){
+            int n, b, c, maxim, minim;
+            cout << "Введите размер массива n: ";
+            cin >> n;
+            int a[]{ n };
+            for(int i = 0; i < n; i++){
+                cout << i + 1 << "-ый элемент: ";
+                cin >> a[i];
+                }
+            cout << "Исходный массив: ";
+            for(int i = 0; i < n; i++){
+                cout << a[i] << " ";
+            }
+            cout << endl;
+            
+            for(int i = 0; i < n; i++){
+                for(int j = i + 1; j < n; j++){
+                    if (a[i] == a[j]){
+                        b = i;
+                        c = j;
+                    }
+                }
+            }
+            maxim = max(b, c);
+            minim = min(b, c);
+            cout << "Номера совпадающих элементов: " << minim << " и " << maxim << endl;
+            break;
+        }
+    }
+    return 0;
+}
