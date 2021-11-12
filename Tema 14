@@ -80,12 +80,13 @@ int main(){
             cout << "НОД этих двух чисел равен: " << A + B << endl;
         }
         if (zad == 6){
-            int N, K = 1, f0, f1, f2;
+            int N, K = 2, f0, f1, f2;
             cout << "Введите число Фибоначчи: "; 
             cin >> N;
             f0 = 0;
             f1 = 1;
-            for(int i = 0; i < N; i++){
+            f2 = 0;
+            while(f2 < N){
                 ++K;
                 f2 = f0 + f1;
                 f0 = f1;
