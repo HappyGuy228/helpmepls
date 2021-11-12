@@ -20,6 +20,7 @@ int main(){
                         cout << i << " ";
                     }
                 }
+                cout << endl;
             }
             else{
                 cout << "Не удовлетворяет условиям задачи" << endl;
