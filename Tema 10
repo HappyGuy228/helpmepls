@@ -109,8 +109,8 @@ int main(){
             }
             else{
                 cout << "False" << endl;
-                break;
             }
+            break;
         }
     }
     return 0;
