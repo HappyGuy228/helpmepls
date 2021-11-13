@@ -84,7 +84,7 @@ int main(){
             cin >> b;
             cout << "Введите длину стороны c: ";
             cin >> c;
-            if (a <= b + c && b <= a + c && c <= a + b){
+            if (a < b + c && b < a + c && c < a + b){
                 if (pow(a, 2) == pow(b, 2) + pow(c, 2) || pow(c, 2) == pow(a, 2) + pow(b, 2) || pow(b, 2) == pow(a, 2) + pow(c, 2)){
                     cout << "True" << endl;
                 }
@@ -104,7 +104,7 @@ int main(){
             cin >> b;
             cout << "Введите длину стороны c: ";
             cin >> c;
-            if (a <= b + c && b <= a + c && c <= a + b){
+            if (a < b + c && b < a + c && c < a + b){
                 cout << "True" << endl;
             }
             else{
