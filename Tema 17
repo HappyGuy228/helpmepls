@@ -84,7 +84,7 @@ int main(){
                 if (a[i] < min)
                     min = a[i];
             }
-            cout << "Минимальный равен: " << min << endl;
+            cout << "Минимальный среди элементов, стоящих на четных местах, равен: " << min << endl;
         }
         if (zad == 4){
             int n, maxim;
