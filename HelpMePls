@@ -1,0 +1,54 @@
+1) Сумма чисел, меньших 1000 и кратных 3 или 5.
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    int a = 1, sum = 0;
+    while (a < 1000){
+        if(a % 3 == 0 || a % 5 == 0){
+            sum += a;
+        }
+        a++;
+    }
+    cout << "Сумма равна: " << sum << endl;
+    return 0;
+}
+
+2) Сумма четных чисел Фибоначчи, меньших 4 миллионов. 
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    int f0 = 1, f1 = 1, f2 = 0, sum = 0;
+    while(f2 < 4000000){
+        if (f2 % 2 == 0){
+            sum += f2;
+        }
+        f2 = f0 + f1;
+        f0 = f1;
+        f1 = f2;
+    }
+    cout << "Сумма равна: " << sum << endl;
+    return 0;
+}
+
+3) Найдите наибольший простой делитель числа 600851475143.
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    long int a = 600851475143, k = 0, biggest;
+    for(long int i = 2; i <= a; i++){
+        if (a % i == 0){
+            a /= i;
+            biggest = i;
+        }
+    }
+    cout << "Наибольший простой делитель этого числа равен " << biggest << endl;
+    return 0;
+}
+
+4) 
