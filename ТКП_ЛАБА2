@@ -1,0 +1,136 @@
+1) файл 01
+
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <script type="text/javascript">
+        /* Для заданных значений переменных
+         var a = 8;
+         var b = 15;
+         1) вычислить сумму всех значений от a до b, результат отобразить в окне браузера.
+         2) вывести в окне браузера все четные числа, лежащие >= a, но < b.
+        */
+        let a = 8, b = 15;
+
+        sum = 0;
+        for (let i = a; i <= b; i++) {
+            sum += i;
+        }
+        document.write("Сумма равна: " + sum + "<br>");
+
+        for (let i = a; i < b; i++) {
+            if (i % 2 == 0) {
+                document.write(i + "<br>");
+            }
+        }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
+
+2) файл 02
+
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+    <script type="text/javascript">
+        /*
+        Пусть есть 10 магазинов, между каждой парой магазинов есть путь.
+        Напишите код вычисления количества возможных маршрутов обхода всех магазинов.
+        Результать отобразить в окне браузера
+        */
+        let value = 1;
+        // просто ищем факториал
+        for (let i = 1; i < 11; i++) {
+            value *= i;
+        }
+        document.write("Количество возможных маршрутов равно: " + value);
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
+
+3) файл 03
+
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+    <script type="text/javascript">
+        /*
+        Используя символ * нарисовать в окне браузера:
+         Прямоугольник,
+         Прямоугольный треугольник,
+         Равносторонний треугольник,
+         Ромб
+        */
+
+        for (let i = 0; i < 4; i++) {
+            if (i == 1 || i == 2) {
+                document.write("*\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0*" + "<br>");
+                continue;
+            }
+            for (let j = 0; j < 8; j++) {
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+
+        for (let i = 0; i < 7; i++) {
+            for (let j = 0; j < i; j++) {
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+
+        let f1 = 0;
+        while (f1 < 5) {
+            let space = "";
+            let star = "";
+            for (let j = 0; j < 5 - f1; j++) {
+                space += "\xa0\xa0";
+            }
+            for (let j = 0; j < 2 * f1 + 1; j++) {
+                star += "*";
+            }
+            document.write("<br>" + space + star);
+            f1++;
+        }
+        document.write("<br>");
+        document.write("<br>");
+
+        for (let i = -4; i < 5; i++) {
+            for (let j = 0; j < Math.abs(i); j++) {
+                document.write("\xa0\xa0");
+            }
+            for (let j = 0; j < 10 - 2 * Math.abs(i) - 1; j++) {
+                document.write("*");
+            }
+            for (let j = 0; j < Math.abs(i); j++) {
+                document.write("\xa0\xa0");
+            }
+            document.write("<br>");
+        }
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
